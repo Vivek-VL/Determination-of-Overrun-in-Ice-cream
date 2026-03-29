@@ -1,285 +1,160 @@
-let phall = document.querySelector("#phall")
-let phred = document.querySelector("#phred")
-let ph8 = document.querySelector("#ph8")
-let ph6 = document.querySelector("#ph6")
-let ph4_5 = document.querySelector("#ph4_5")
-let ph4 = document.querySelector("#ph4")
-let ph3 = document.querySelector("#ph3")
-let phcap = document.querySelector("#phcap")
-let cyl = document.querySelector("#cyl")
-let msol = document.querySelector("#msol")
+let wbath = document.querySelector("#wbath")
+let wbathback = document.querySelector("#wbathback")
+let onoffbtn = document.querySelector("#onoffbtn")
+let plusbtn = document.querySelector("#plusbtn")
+let minusbtn = document.querySelector("#minusbtn")
+let temptext = document.querySelector("#temptext")
+let temptext1 = document.querySelector("#temptext1")
+let tempscreen = document.querySelector("#tempscreen")
 
-let falsolc = document.querySelector("#fallingsolc")
-let falsolr = document.querySelector("#fallingsolr")
-
-let sol1 = document.querySelector("#sol1")
-let sol2 = document.querySelector("#sol2")
-let sol3 = document.querySelector("#sol3")
-let sol4 = document.querySelector("#sol4")
-let sol5 = document.querySelector("#sol5")
-
-falsolc.style.opacity="70%"
-falsolr.style.opacity="70%"
-
-ph4.style.left="-50%"
-ph4_5.style.left="-50%"
-ph6.style.left="-50%"
-ph8.style.left="-50%"
-phred.style.left="-50%"
+let beakerdiv = document.querySelector("#beakerdiv")
+let beakersol = document.querySelector("#beakersol")
 
 
+let bath = "off"
 
 
-let solselector = sol1
-
-
-
-let bufferbottle = ph3
-let buffersol = phall
-
-let cylleft = "42.5%"
-
-let falsolselect = falsolc
-let falsolleft="50.8%"
-
-let cylins = "Click on measuring cylinder to pour measured buffer solution into first left conical flask."
-
-
-
-function bufferpour(){
-    if(f==20){
-        f=21
-        phcap.style.top="43.5%"
-        setTimeout(function(){
-            phcap.style.left="22.5%"
-            setTimeout(function(){
-                phcap.style.top="85%"
-                setTimeout(function(){
-                    bufferbottle.style.bottom="45%"
-                    buffersol.style.bottom="45%"
-                    setTimeout(function(){
-                        bufferbottle.style.left="25%"
-                        buffersol.style.left="25%"
-                        setTimeout(function(){
-                            bufferbottle.style.rotate="50deg"
-                            buffersol.style.rotate="50deg"
-                            buffersol.style.left="23%"
-                            buffersol.style.bottom="47.1%"
-                            falsolselect.style.visibility="visible"
-                            falsolselect.style.left="37.3%"
-                            setTimeout(function(){
-                                falsolselect.style.height="64%"
-                                buffersol.style.height="20%"
-                                buffersol.style.left="21.8%"
-                                buffersol.style.bottom="48.9%"
-                                setTimeout(function(){
-                                    msol.style.height="42%"
-                                    setTimeout(function(){
-                                        falsolselect.style.height="0%"
-                                        falsolselect.style.top="89%"
-                                        setTimeout(function(){
-                                            bufferbottle.style.rotate=""
-                                            buffersol.style.rotate=""
-                                            buffersol.style.left="25%"
-                                            buffersol.style.bottom="45.2%"
-                                            setTimeout(function(){
-                                                bufferbottle.style.left=""
-                                                buffersol.style.left=""
-                                                falsolselect.style.top=""
-                                                setTimeout(function(){
-                                                    bufferbottle.style.bottom=""
-                                                    buffersol.style.bottom="12.2%"
-                                                    setTimeout(function(){
-                                                        phcap.style.top="43.5%"
-                                                        setTimeout(function(){
-                                                            phcap.style.left=""
-                                                            setTimeout(function(){
-                                                                phcap.style.top=""
-                                                                f=200
-                                                                ins.innerText=cylins
-                                                            },1000)
-                                                        },1000)
-                                                    },1000)
-                                                },1000)
-                                            },1000)
-                                        },500)
-                                    },500)
-                                },500)
-                            },1000)
-                        },1000)
-                    },1000)
-
-                },1000)
-            },1000)
-        },1000)
+function onoffnew1(){
+    console.log(f)
+    if(f==7 && bath=="off"){
+        f=8
+        tempscreen.style.opacity="100%"
+        onoffbtn.style.backgroundImage = "radial-gradient(rgb(255, 215, 15),rgb(255, 122, 6))"
+        ins.innerText="Set temperature at 49 degree celcius by pressing '+' , '-' buttons then press NEXT button."
+    }
+    else if(f==8 && bath=="off"){
+        f=7
+        tempscreen.style.opacity="0%"
+        onoffbtn.style.backgroundImage = "radial-gradient(rgb(226, 226, 226),rgb(135, 124, 124))"
+        ins.innerText="Turn on the water-Bath by clicking on ON/OFF button."
     }
 }
 
 
-
-function cylinder(){
-    if(f==200){
-        f=201
-        cyl.style.bottom="52.7%"
-        setTimeout(function(){
-            cyl.style.left=cylleft
-            setTimeout(function(){
-                cyl.style.rotate="45deg"
-                falsolselect.style.visibility="visible"
-                falsolselect.style.left=falsolleft
-                setTimeout(function(){
-                    falsolselect.style.height="64%"
-                    solselector.style.visibility="visible"
-                    setTimeout(function(){
-                        msol.style.height="0%"
-                        powder.style.opacity="0%"
-                        setTimeout(function(){
-                            solselector.style.opacity="100%"
-                            falsolselect.style.top="89%"
-                            falsolselect.style.height="0%"
-                            powder.style.visibility="hidden"
-                            setTimeout(function(){
-                                cyl.style.rotate=""
-                                falsolselect.style.top=""
-                                setTimeout(function(){
-                                    cyl.style.left=""
-                                    setTimeout(function(){
-                                        cyl.style.bottom=""
-                                        setTimeout(function(){
-                                            bufferverify()
-                                        },1000)
-                                    },1000)
-                                },1000)
-                            },1000)
-                        },500)
-                    },500)
-                },1000)
-            },1000)
-        },1000)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-function bufferverify(){
-    if(bufferbottle==ph3){
-        bufferout()
-        bufferbottle=ph4
-        buffersol=phred
-        buffersol.style.height=""
-        falsolleft="60.8%"
-        cylleft = "52.5%"
-        falsolselect=falsolr
-        powder=sample2
-        solselector=sol2
-        setTimeout(bufferin,1500)
-        ins.innerText="Click on buffer solution bottle to measure 100ml pH 4 solution into measuring cylinder. "
-        cylins = "Click on measuring cylinder to pour measured buffer solution into second left conical flask."
-        msol.src="images/sol-pink.png"
-    }
-    else if(bufferbottle==ph4){
-        bufferout()
-        bufferbottle=ph4_5
-        buffersol=phall
-        buffersol.style.height=""
-        falsolleft="70.8%"
-        cylleft = "62.5%"
-        falsolselect=falsolc
-        falsolc.src="images/PH - buffer - solutions-green.png"
-        powder=sample3
-        solselector=sol3
-        setTimeout(bufferin,1500)
-        ins.innerText="Click on buffer solution bottle to measure 100ml pH 4.5 solution into measuring cylinder. "
-        cylins = "Click on measuring cylinder to pour measured buffer solution into middle one conical flask."
-        setTimeout(function(){
-            phall.src="images/PH - buffer - solutions-green.png"
-            msol.src="images/sol-green.png"
-        },500)
-    }
-    else if(bufferbottle==ph4_5){
-        bufferout()
-        bufferbottle=ph6
-        buffersol=phall
-        buffersol.style.height=""
-        falsolleft="80.8%"
-        cylleft = "72.5%"
-        powder=sample4
-        solselector=sol4
-        falsolc.src="images/PH - buffer - solutions-yellow.png"
-        setTimeout(bufferin,1500)
-        ins.innerText="Click on buffer solution bottle to measure 100ml pH 6 solution into measuring cylinder. "
-        cylins = "Click on measuring cylinder to pour measured buffer solution into second right conical flask."
-        setTimeout(function(){
-            phall.src="images/PH - buffer - solutions-yellow.png"
-            msol.src="images/sol-yellow.png"
-        },500)
-    }
-    else if(bufferbottle==ph6){
-        bufferout()
-        bufferbottle=ph8
-        buffersol=phall
-        buffersol.style.height=""
-        falsolleft="90.8%"
-        cylleft = "82.5%"
-        powder=sample5
-        solselector=sol5
-        falsolc.src="images/PH - buffer - solutions-blue.png"
-        setTimeout(bufferin,1500)
-        ins.innerText="Click on buffer solution bottle to measure 100ml pH 8 solution into measuring cylinder. "
-        cylins = "Click on measuring cylinder to pour measured buffer solution into first right conical flask."
-        setTimeout(function(){
-            phall.src="images/PH - buffer - solutions-blue.png"
-            msol.src="images/sol-blue.png"
-        },500)
-    }
-    else if(bufferbottle==ph8){
-        ins.innerText="Press NEXT button."
-        startbutton.innerText="NEXT"
-        f=22
+function plusnew1(){
+    if(f==8){
+        bath="on"
         startbutton.style.visibility="visible"
-        corks()
+        if(parseInt(temptext1.innerText)<=100 && (parseInt(temptext1.innerText))>=0){
+            if((parseInt(temptext1.innerText))<9){
+                temptext1.innerText="0"+ (parseInt(temptext1.innerText)+1)
+            }
+            else{
+                temptext1.innerText= parseInt(temptext1.innerText)+1
+            } 
+        }
+    }
+}
+
+
+function minusnew1(){
+    if(f==8){
+        bath="on"
+        if(parseInt(temptext1.innerText)<=100 && (parseInt(temptext1.innerText))>0){
+            if((parseInt(temptext1.innerText))<10){
+                temptext1.innerText="0"+ (parseInt(temptext1.innerText)-1)
+            }
+            else{
+                temptext1.innerText= parseInt(temptext1.innerText)-1
+            } 
+        }
+    }
+}
+
+
+
+function gaintemp(){
+    if((parseInt(temptext.innerText))!=(parseInt(temptext1.innerText))){
+        if((parseInt(temptext.innerText))<9){
+                temptext.innerText="0"+ (parseInt(temptext.innerText)+1)
+        }
+        else{
+            temptext.innerText=(parseInt(temptext.innerText)+1)
+        }
+        setTimeout(function(){
+            gaintemp()
+        },300)
+    }
+    else{
+        ins.innerText="Water Bath is heated as required. Click on beaker to place it in water bath to melt ice-cream. "
+        setTimeout(function(){
+            f=10
+        },500)
     }
 }
 
 
 
 
+function beaker1(){
+    if(f==10){
+        f=11
+        beakerdiv.style.top="10%"
+        samp1.style.top="31%"
+        samp2.style.top="30%"
+        samp3.style.top="34%"
+        samp4.style.top="31%"
+        samp5.style.top="31%"
+        samp6.style.top="33.7%"
+        samp7.style.top="33%"
+        samp8.style.top="33%"
 
+        setTimeout(function(){
+            beakerdiv.style.left="18%"
+            samp1.style.left="21.8%"
+            samp2.style.left="20%"
+            samp3.style.left="22%"
+            samp4.style.left="24%"
+            samp5.style.left="26%"
+            samp6.style.left="24%"
+            samp7.style.left="26.5%"
+            samp8.style.left="20%"
 
+            setTimeout(function(){
+                beakerdiv.style.top="40%"
+                samp1.style.top="61%"
+                samp2.style.top="60%"
+                samp3.style.top="64%"
+                samp4.style.top="61%"
+                samp5.style.top="61%"
+                samp6.style.top="63.7%"
+                samp7.style.top="63%"
+                samp8.style.top="63%"
 
+                setTimeout(function(){
+                    ins.innerText="Wait! ice-cream is melting."
+                    samp1.style.visibility="hidden"
+                    samp2.style.visibility="hidden"
+                    samp3.style.visibility="hidden"
+                    samp4.style.visibility="hidden"
+                    samp5.style.visibility="hidden"
+                    samp6.style.visibility="hidden"
+                    samp7.style.visibility="hidden"
+                    samp8.style.visibility="hidden"
+                    beakersol.style.visibility="visible"
+                    beakersol.style.opacity="100%"
+                    setTimeout(function(){
+                        ins.innerText="Ice-cream is melted now! Click on beaker to put it back from water bath."
+                        f=12
 
-
-
-
-function bufferout(){
-    bufferbottle.style.left="-50%"
-    buffersol.style.left="-50%"
-    phcap.style.left="-50%"
-    bufferbottle.style.visibility="hidden"
-    bufferbottle.style.visibility="hidden"
+                    },5000)
+                },1000)
+            },1000)
+        },1000)
+    }
+    else if(f==12){
+        f=13
+        beakerdiv.style.top="10%"
+        setTimeout(function(){
+            beakerdiv.style.left=""
+            setTimeout(function(){
+                beakerdiv.style.top=""
+                setTimeout(function(){
+                    startbutton.style.visibility="visible"
+                    ins.innerText="Press NEXT button."
+                    f=14
+                },1000)
+            },1000)
+        },1000)
+    }
 }
-
-function bufferin(){
-    bufferbottle.style.left=""
-    buffersol.style.left=""
-    phcap.style.left=""
-    bufferbottle.style.visibility="visible"
-    buffersol.style.visibility="visible"
-    f=20
-}
-
-
-
-
-
-
-
