@@ -240,8 +240,10 @@ body{
 
 #beakersol{
     position: absolute;
-    height: 34%;
+    height: 34%; 
     width: 82%;
+    /* height: 12%; */
+    /* width: 81.5%; */
     bottom: 0%;
     right: 3.5%;
     transition: all;
@@ -283,7 +285,7 @@ body{
     rotate: -50deg;
     transition: all;
     transition-duration: 1s;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 /* #samp1{
@@ -504,11 +506,15 @@ body{
 
 #msol{
     position: absolute;
-    /* height: 80%; */
+    /* height: 17%;
+    height: 20%;
+    height: 25%; */
     height: 0%;
-    width: 56%;
+    width: 55.4%;
     bottom: 3.3%;
     left: 21.9%;
+    transition: all;
+    transition-duration: 1s;
 }
 
 #mcyldiv1{
