@@ -283,6 +283,7 @@ body{
     rotate: -50deg;
     transition: all;
     transition-duration: 1s;
+    /* visibility: hidden; */
 }
 
 /* #samp1{
@@ -501,16 +502,75 @@ body{
     transition-duration: 1s;
 }
 
+#msol{
+    position: absolute;
+    /* height: 80%; */
+    height: 0%;
+    width: 56%;
+    bottom: 3.3%;
+    left: 21.9%;
+}
+
+#mcyldiv1{
+    position: absolute;
+    height: 25%;
+    width: 5%;
+    top: 65%;
+    left: -50%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#mcyl1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all;
+    transition-duration: 1s;
+}
 
 
+#msol1{
+    position: absolute;
+    /* height: 93.3%; */
+    height: 0%;
+    width: 56%;
+    bottom: 3.3%;
+    left: 21.9%;
+    transition: all;
+    transition-duration: 1s;
+    opacity: 70%;
+}
+
+#diswaterdiv{
+    position: absolute;
+    height: 50%;
+    top: 40%;
+    width: 15%;
+    /* left: 7%; */
+    left: -50%;
+    transition: all;
+    transition-duration: 1s;
+}
 
 
+#diswater{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 
+#diswatersol{
+    position: absolute;
+    height: 75%;
+    width: 66%;
+    bottom: 0%;
+    left: 0.5%;
+    transition: all;
+    transition-duration: 1s;
 
-
-
-
-
+}
 
 
 

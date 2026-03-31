@@ -56,6 +56,8 @@ function start(){
         setTimeout(function(){
             mcyldiv.style.left="60%"
             funnel.style.left="40%"
+            mcyldiv1.style.left="25%"
+            diswaterdiv.style.left="7%"
             setTimeout(function(){
                 f=16
                 ins.innerText="Click on funnel to place it on 250ml measuring cylinder."
