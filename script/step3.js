@@ -5,7 +5,7 @@ let msol1 = document.querySelector("#msol1")
 let diswaterdiv = document.querySelector("#diswaterdiv")
 let diswatersol = document.querySelector("#diswatersol")
 let funnel = document.querySelector("#funnel")
-
+let fsol = document.querySelector("#fsol")
 
 
 function funnel1(){
@@ -36,9 +36,17 @@ function diswater1(){
             diswaterdiv.style.rotate="20deg"
             setTimeout(function(){
                 diswatersol.style.height="72%"
+                fsol.style.left=""
+                fsol.style.top=""
+                fsol.style.height="29%"
                 setTimeout(function(){
+                    fsol.style.transitionDuration="1S"
+                    fsol.style.height="7.4%"
                     msol1.style.height="93.3%"
                     setTimeout(function(){
+                        fsol.style.transitionDuration="0.2S"
+                        fsol.style.top="67.4%"
+                        fsol.style.height="0%"
                         diswaterdiv.style.left="7%"
                         diswaterdiv.style.rotate=""
                         setTimeout(function(){
@@ -46,12 +54,11 @@ function diswater1(){
                             setTimeout(function(){
                                 f=22
                                 ins.innerText="Click on 10ml measuring cylinder to pour it into flask."
-                                // mcyl11()
+                                mcyl11()
                             },1000)
                         },1000)
                     },1000)
                 },200)
-
             },1000)
         },1000)
     }
@@ -64,13 +71,20 @@ function mcyl11(){
         mcyldiv1.style.top="10%"
         setTimeout(function(){
             mcyldiv1.style.left="75%"
+            fsol.style.left="80.3%"
+            fsol.style.top="12%"
             setTimeout(function(){
                 mcyldiv1.style.rotate="20deg"
+                fsol.style.transitionDuration="0.2s"
                 setTimeout(function(){
+                    fsol.style.height="81%"
                     msol1.style.transitionDuration="2s"
                     msol1.style.height="0%"
                     setTimeout(function(){
                         mcyldiv1.style.rotate=""
+                        fsol.style.height="0%"
+                        fsol.style.top="93%"
+                        
                         setTimeout(function(){
                             mcyldiv1.style.left="25%"
                             setTimeout(function(){

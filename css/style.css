@@ -283,7 +283,7 @@ body{
     rotate: -50deg;
     transition: all;
     transition-duration: 1s;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 /* #samp1{
@@ -554,6 +554,20 @@ body{
     transition-duration: 1s;
 }
 
+#fsol{
+    position: absolute;
+    /* height: 29%; */
+    height: 0%;
+    /* height: 7.5%; */
+    /* height: 81%; */
+    width: 0.5%;
+    left: 27.2%;
+    /* left: 80.3%; */
+    top: 60%;
+    /* top: 12%; */
+    transition: all;
+    transition-duration: 0.2s;
+}
 
 #diswater{
     position: absolute;
