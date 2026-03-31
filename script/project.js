@@ -64,6 +64,14 @@ function start(){
             },1000)
         },1000)
     }
+    else if(f==32){
+        f=33
+        startbutton.style.visibility="hidden"
+        last.style.top="0%"
+        setTimeout(function(){
+            ins.innerText="By using formula calculate the Overrun and verify your answer."
+        },1000)
+    }
         
 
 
